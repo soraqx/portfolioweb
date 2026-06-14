@@ -18,24 +18,18 @@ const THEME_CLASSES: Record<Theme, string> = {
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setThemeState] = useState<Theme>('cream');
-  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     const saved = localStorage.getItem('portfolio-theme') as Theme | null;
-    if (saved) {
+    if (saved && ['cream', 'warm-beige', 'cool-gray', 'taupe'].includes(saved)) {
       setThemeState(saved);
     }
-    setMounted(true);
   }, []);
 
   const setTheme = (newTheme: Theme) => {
     setThemeState(newTheme);
     localStorage.setItem('portfolio-theme', newTheme);
   };
-
-  if (!mounted) {
-    return <>{children}</>;
-  }
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>

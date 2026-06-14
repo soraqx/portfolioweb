@@ -35,12 +35,16 @@ export default function Header() {
               {link.label}
             </button>
           ))}
-          <ThemeSwitcher />
+          <div className="pl-8 border-l border-cream-200">
+            <ThemeSwitcher />
+          </div>
         </div>
 
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center gap-4">
-          <ThemeSwitcher />
+          <div>
+            <ThemeSwitcher />
+          </div>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="text-cool-gray-900"
