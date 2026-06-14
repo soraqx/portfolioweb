@@ -8,6 +8,6 @@
   },
   "dependencies": {
     "convex": "^1.5.0",
-    "@portfolio/shared": "workspace:*"
+    "@portfolio/shared": "^1.0.0"
   }
 }

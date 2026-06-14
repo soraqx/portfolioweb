@@ -4,12 +4,16 @@
   "description": "Minimalist portfolio website with React, Vite, and Convex",
   "private": true,
   "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "dev": "pnpm --filter @portfolio/web dev",
-    "build": "pnpm install && pnpm --filter @portfolio/web build",
-    "preview": "pnpm --filter @portfolio/web preview",
-    "lint": "pnpm -r lint",
-    "type-check": "pnpm -r type-check"
+    "dev": "npm --workspace @portfolio/web run dev",
+    "build": "npm --workspace @portfolio/web run build",
+    "preview": "npm --workspace @portfolio/web run preview",
+    "lint": "npm --workspaces run lint --if-present",
+    "type-check": "npm --workspaces run type-check --if-present"
   },
   "devDependencies": {
     "@types/node": "^20.11.0",
@@ -18,6 +22,6 @@
   },
   "engines": {
     "node": ">=18.0.0",
-    "pnpm": ">=6.0.0"
+    "npm": ">=9.0.0"
   }
 }
