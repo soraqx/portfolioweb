@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "pnpm --filter @portfolio/web dev",
-    "build": "pnpm --filter @portfolio/web build",
+    "build": "pnpm install && pnpm --filter @portfolio/web build",
     "preview": "pnpm --filter @portfolio/web preview",
     "lint": "pnpm -r lint",
     "type-check": "pnpm -r type-check"
