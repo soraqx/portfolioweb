@@ -1,0 +1,11 @@
+{
+  "buildCommand": "pnpm build",
+  "outputDirectory": "apps/web/dist",
+  "framework": "vite",
+  "env": [
+    {
+      "key": "VITE_CONVEX_URL",
+      "value": "@convex_url"
+    }
+  ]
+}

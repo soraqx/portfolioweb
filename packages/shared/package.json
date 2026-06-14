@@ -1,0 +1,13 @@
+{
+  "name": "@portfolio/shared",
+  "version": "1.0.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/types.ts"
+  },
+  "main": "./src/types.ts",
+  "types": "./src/types.ts",
+  "files": [
+    "src"
+  ]
+}

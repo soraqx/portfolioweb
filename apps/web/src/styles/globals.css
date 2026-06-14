@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply transition-colors duration-300;
+  }
+
+  body {
+    @apply bg-cream-50 text-cool-gray-900;
+  }
+
+  a {
+    @apply text-cream-600 hover:text-cream-700;
+  }
+}
+
+@layer components {
+  .prose-min {
+    @apply max-w-none;
+  }
+}
